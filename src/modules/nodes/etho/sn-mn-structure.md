@@ -1,0 +1,5 @@
+- `container/`          # container definition
+- `data/`               # only directory from host filesystem accessible to running node 
+- `tools/`              # contains utility scripts
+- `docker-compose.yml`  # node service definition
+- `geth`                # access to node `geth`, use it as binary, e.g. `geth help`

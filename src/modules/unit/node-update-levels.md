@@ -1,0 +1,4 @@
+- `off`       # no auto updates
+- `node`      # auto update node binaries
+- `service`   # auto update node binaries and node container definition
+- `all`       # above + ans auto updates

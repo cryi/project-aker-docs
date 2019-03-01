@@ -1,0 +1,6 @@
+- modular and transparent
+- simple setup and management
+- auto updates to both AMS and the node software (speeds up and simplifies node network upgrades)
+- health checks with auto-heal to maximize uptime
+- simplifies development (developers can target and test specific OS while AMS provides support for main server side OSes)
+- security - all modules are audited (does not include audit of node code)

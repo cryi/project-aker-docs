@@ -1,0 +1,7 @@
+- all [features of ANS](https://github.com/cryon-io/ans/wiki)
+- simple setup and management of multiple nodes
+- auto updates to Unit
+- templated setups 
+    - simplified migration and reinstallation
+    - ability to share setup templates
+- management of multiple nodes 

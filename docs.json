@@ -1,0 +1,75 @@
+{
+    "modules": [
+        "modules"
+    ],
+    "projects": [
+        {
+            "id": "unit",
+            "path": "./src/unit",
+            "output": "./release/unit"
+        },
+        {
+            "id": "ans",
+            "path": "./src/ans",
+            "output": "./release/ans"
+        },
+        {
+            "id": "etho-sn",
+            "path": "src/nodes/etho/sn-mn",
+            "output": "release/etho-sn",
+            "variables": {
+                "ProjectNameLong": "Ether-1 Service Node",
+                "Repository": "cryon-io/docker-etho-sn",
+                "UserID": 10000,
+                "NODE_TYPE": "ETHO_SN"
+            },
+            "linkedPages": [
+                {
+                    "page": "src/pages/compose-basics.md",
+                    "outputPath": "Docker-and-Compose-Basics.md"
+                },
+                {
+                    "page": "src/pages/requirements.md",
+                    "outputPath": "System-Requirements.md"
+                },
+                {
+                    "page": "src/pages/updates.md",
+                    "outputPath": "management/Updates.md"
+                },
+                {
+                    "page": "src/pages/setup/multi-node.md",
+                    "outputPath": "setup/Multi-Node.md"
+                }
+            ]
+        },
+        {
+            "id": "etho-mn",
+            "path": "src/nodes/etho/sn-mn",
+            "output": "release/etho-mn",
+            "variables": {
+                "ProjectNameLong": "Ether-1 Master Node",
+                "Repository": "cryon-io/docker-etho-mn",
+                "UserID": 10000,
+                "NODE_TYPE": "ETHO_MN"
+            },
+            "linkedPages": [
+                {
+                    "page": "src/pages/compose-basics.md",
+                    "outputPath": "Docker-and-Compose-Basics.md"
+                },
+                {
+                    "page": "src/pages/requirements.md",
+                    "outputPath": "System-Requirements.md"
+                },
+                {
+                    "page": "src/pages/updates.md",
+                    "outputPath": "management/Updates.md"
+                },
+                {
+                    "page": "src/pages/setup/multi-node.md",
+                    "outputPath": "setup/Multi-Node.md"
+                }
+            ]
+        }
+    ]
+}

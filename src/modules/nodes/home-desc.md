@@ -1,0 +1,1 @@
+<%ProjectNameLong%> docker template for ANS (Autonomous Node System) and Unit (Unified crypto node management).
