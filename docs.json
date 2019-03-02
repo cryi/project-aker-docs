@@ -29,7 +29,7 @@
                     "outputPath": "Docker-and-Compose-Basics.md"
                 },
                 {
-                    "page": "src/pages/requirements.md",
+                    "page": "src/pages/node-requirements.md",
                     "outputPath": "System-Requirements.md"
                 },
                 {
@@ -58,7 +58,37 @@
                     "outputPath": "Docker-and-Compose-Basics.md"
                 },
                 {
-                    "page": "src/pages/requirements.md",
+                    "page": "src/pages/node-requirements.md",
+                    "outputPath": "System-Requirements.md"
+                },
+                {
+                    "page": "src/pages/updates.md",
+                    "outputPath": "management/Updates.md"
+                },
+                {
+                    "page": "src/pages/setup/multi-node.md",
+                    "outputPath": "setup/Multi-Node.md"
+                }
+            ]
+        },
+        {
+            "id": "crown-sn",
+            "path": "src/nodes/crown",
+            "output": "release/crown-sn",
+            "variables": {
+                "ProjectNameLong": "CROWN System Node",
+                "Repository": "cryon-io/docker-crown-sn",
+                "UserID": 13000,
+                "NODE_TYPE": "CROWN_SN",
+                "DaemonName": "crown"
+            },
+            "linkedPages": [
+                {
+                    "page": "src/pages/compose-basics.md",
+                    "outputPath": "Docker-and-Compose-Basics.md"
+                },
+                {
+                    "page": "src/pages/node-requirements.md",
                     "outputPath": "System-Requirements.md"
                 },
                 {

@@ -2,4 +2,4 @@
 
 ## Standalone
 
-<% -- src/modules/nodes/etho/sn-mn-structure.md -- %>
+<% -- src/modules/nodes/eth-derivatives/basic-structure.md -- %>

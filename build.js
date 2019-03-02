@@ -39,7 +39,7 @@ const processFile = (file, variables, { start, count } = {start:0, count:null}, 
         while (lineBuffer = liner.next()) {
             let line = lineBuffer.toString();
             Object.keys(variables || {}).forEach((variable) => {
-                line = line.replace(`<%${variable}%>`, variables[variable]);
+                line = line.replace(new RegExp(`<%${variable}%>`, "g"), variables[variable]);
             });
             console.log(`[${path.basename(file)}] ${line}`);
             let trimmedLine = line.trim();
@@ -72,24 +72,6 @@ const processFile = (file, variables, { start, count } = {start:0, count:null}, 
     });
 }
 
-const processLinkedPage = (file, variables) => {
-    return new Promise(async (resolve, reject) => {
-        console.log(`Processing ${file}`);
-        const result = [];
-        const liner = new lineByLine(file);
-        while (lineBuffer = liner.next()) {
-            let line = lineBuffer.toString().trim();
-            Object.keys(variables || {}).forEach((variable) => {
-                line = line.replace(`<%${variable}%>`, variables[variable]);
-            });
-            console.log(`[${path.basename(file)}] ${line}`);
-            result.push(line);
-        }
-
-        resolve(result);
-    });
-}
-
 (async () => {
     fs.emptyDirSync('release');
     conf.projects.forEach(project => {
@@ -98,6 +80,13 @@ const processLinkedPage = (file, variables) => {
         const project_path = path.resolve(project.path);
         const project_files = _.filter(md_files, file => file.includes(project_path));
         const project_linked_pages = project.linkedPages || [];
+
+        if (!project.variables) {
+            project.variables = { ProjectID: project.id };
+        }
+        else if (!Object.keys(project.variables).includes('ProjectID')) {
+            project.variables['ProjectID'] = project.id;
+        }
 
         project_files.forEach(async (file) => {
             const outputFileContent = await processFile(file, project.variables);
