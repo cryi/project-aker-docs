@@ -15,13 +15,17 @@
         },
         {
             "id": "etho-sn",
-            "path": "src/nodes/etho/sn-mn",
+            "path": "src/nodes/etho",
             "output": "release/etho-sn",
             "variables": {
                 "ProjectNameLong": "Ether-1 Service Node",
                 "Repository": "cryon-io/docker-etho-sn",
                 "UserID": 10000,
-                "NODE_TYPE": "ETHO_SN"
+                "NODE_TYPE": "ETHO_SN",
+                "DONATION_CURR": "ETHO",
+                "DONATION_ADDR": "0x46Ff451710Dd245040098c2F308CA55A373ff2cE",
+                "STRUCTURE_PATH": "eth-derivatives/etho-structure.md",
+                "TEMPLATE_PATH": "etho/etho-sn-unit.json"
             },
             "linkedPages": [
                 {
@@ -35,6 +39,10 @@
                 {
                     "page": "src/pages/updates.md",
                     "outputPath": "management/Updates.md"
+                },
+                {
+                    "page": "src/pages/readme.md",
+                    "outputPath": "Readme.md"
                 },
                 {
                     "page": "src/pages/setup/multi-node.md",
@@ -44,13 +52,17 @@
         },
         {
             "id": "etho-mn",
-            "path": "src/nodes/etho/sn-mn",
+            "path": "src/nodes/etho",
             "output": "release/etho-mn",
             "variables": {
                 "ProjectNameLong": "Ether-1 Master Node",
                 "Repository": "cryon-io/docker-etho-mn",
                 "UserID": 10000,
-                "NODE_TYPE": "ETHO_MN"
+                "NODE_TYPE": "ETHO_MN",
+                "DONATION_CURR": "ETHO",
+                "DONATION_ADDR": "0x46Ff451710Dd245040098c2F308CA55A373ff2cE",
+                "STRUCTURE_PATH": "eth-derivatives/etho-structure.md",
+                "TEMPLATE_PATH": "etho/etho-mn-unit.json"
             },
             "linkedPages": [
                 {
@@ -66,6 +78,123 @@
                     "outputPath": "management/Updates.md"
                 },
                 {
+                    "page": "src/pages/readme.md",
+                    "outputPath": "Readme.md"
+                },
+                {
+                    "page": "src/pages/setup/multi-node.md",
+                    "outputPath": "setup/Multi-Node.md"
+                }
+            ]
+        },
+        {
+            "id": "etho-gn",
+            "path": "src/nodes/etho",
+            "output": "release/etho-gn",
+            "variables": {
+                "ProjectNameLong": "Ether-1 Gateway Node",
+                "Repository": "cryon-io/docker-etho-gn",
+                "UserID": 10000,
+                "NODE_TYPE": "ETHO_GN",
+                "DONATION_CURR": "ETHO",
+                "DONATION_ADDR": "0x46Ff451710Dd245040098c2F308CA55A373ff2cE",
+                "STRUCTURE_PATH": "eth-derivatives/etho-fs-structure.md",
+                "TEMPLATE_PATH": "etho/etho-gn-unit.json"
+            },
+            "linkedPages": [
+                {
+                    "page": "src/pages/compose-basics.md",
+                    "outputPath": "Docker-and-Compose-Basics.md"
+                },
+                {
+                    "page": "src/pages/node-requirements.md",
+                    "outputPath": "System-Requirements.md"
+                },
+                {
+                    "page": "src/pages/updates.md",
+                    "outputPath": "management/Updates.md"
+                },
+                {
+                    "page": "src/pages/readme.md",
+                    "outputPath": "Readme.md"
+                },
+                {
+                    "page": "src/pages/setup/multi-node.md",
+                    "outputPath": "setup/Multi-Node.md"
+                }
+            ]
+        },
+        {
+            "id": "gin-mn",
+            "path": "src/nodes/btc-derivatives",
+            "output": "release/gin-mn",
+            "variables": {
+                "ProjectNameLong": "GINCOIN Masternode",
+                "Repository": "cryon-io/docker-gincoin-mn",
+                "UserID": 11000,
+                "NODE_TYPE": "GINCOIN_MN",
+                "DONATION_CURR": "GIN",
+                "DONATION_ADDR": "GNSysXfThymKMSTKRaP7Nc1TLK3RkVbxuM",
+                "ANS_ADDITIONAL_PARAM":"-sp=ip=[external ip] -sp=nodeprivkey=[MN privkey]",
+                "TEMPLATE_PATH": "gin/unit.json",
+                "DaemonName": "gincoin"
+            },
+            "linkedPages": [
+                {
+                    "page": "src/pages/compose-basics.md",
+                    "outputPath": "Docker-and-Compose-Basics.md"
+                },
+                {
+                    "page": "src/pages/node-requirements.md",
+                    "outputPath": "System-Requirements.md"
+                },
+                {
+                    "page": "src/pages/updates.md",
+                    "outputPath": "management/Updates.md"
+                },
+                {
+                    "page": "src/pages/readme.md",
+                    "outputPath": "Readme.md"
+                },
+                {
+                    "page": "src/pages/setup/multi-node.md",
+                    "outputPath": "setup/Multi-Node.md"
+                }
+            ]
+        },
+        {
+            "id": "ulead-mn",
+            "path": "src/nodes/btc-derivatives",
+            "output": "release/ulead-mn",
+            "variables": {
+                "ProjectNameLong": "GINCOIN Masternode",
+                "Repository": "cryon-io/docker-ulead-mn",
+                "UserID": 14000,
+                "NODE_TYPE": "ULEAD_MN",
+                "DONATION_CURR": "ULEAD",
+                "DONATION_ADDR": "UYKAaZFM4gcv9msJREgEVgMwwcfJoVYBit",
+                "ANS_ADDITIONAL_PARAM":"-sp=ip=[external ip] -sp=nodeprivkey=[MN privkey]",
+                "TEMPLATE_PATH": "ulead/unit.json",
+                "DaemonName": "ulead"
+            },
+            "linkedPages": [
+                {
+                    "page": "src/pages/compose-basics.md",
+                    "outputPath": "Docker-and-Compose-Basics.md"
+                },
+                {
+                    "page": "src/pages/node-requirements.md",
+                    "outputPath": "System-Requirements.md"
+                },
+                {
+                    "page": "src/pages/updates.md",
+                    "outputPath": "management/Updates.md"
+                },
+                {
+                    "page": "src/pages/readme.md",
+                    "outputPath": "Readme.md"
+                },
+                {
                     "page": "src/pages/setup/multi-node.md",
                     "outputPath": "setup/Multi-Node.md"
                 }
@@ -73,13 +202,17 @@
         },
         {
             "id": "crown-sn",
-            "path": "src/nodes/crown",
+            "path": "src/nodes/btc-derivatives",
             "output": "release/crown-sn",
             "variables": {
                 "ProjectNameLong": "CROWN System Node",
                 "Repository": "cryon-io/docker-crown-sn",
                 "UserID": 13000,
                 "NODE_TYPE": "CROWN_SN",
+                "DONATION_CURR": "CRW",
+                "DONATION_ADDR": "16a1Ekv3tFNGX7YmzKLcdJnSam61BrNFrH",
+                "ANS_ADDITIONAL_PARAM":"-sp=ip=[external ip] -sp=nodeprivkey=[MN privkey]",
+                "TEMPLATE_PATH": "crown/crown-sn-unit.json",
                 "DaemonName": "crown"
             },
             "linkedPages": [
@@ -94,6 +227,162 @@
                 {
                     "page": "src/pages/updates.md",
                     "outputPath": "management/Updates.md"
+                },
+                {
+                    "page": "src/pages/readme.md",
+                    "outputPath": "Readme.md"
+                },
+                {
+                    "page": "src/pages/setup/multi-node.md",
+                    "outputPath": "setup/Multi-Node.md"
+                }
+            ]
+        },
+        {
+            "id": "crown-mn",
+            "path": "src/nodes/btc-derivatives",
+            "output": "release/crown-mn",
+            "variables": {
+                "ProjectNameLong": "CROWN Masternode",
+                "Repository": "cryon-io/docker-crown-mn",
+                "UserID": 13000,
+                "NODE_TYPE": "CROWN_MN",
+                "DONATION_CURR": "CRW",
+                "DONATION_ADDR": "16a1Ekv3tFNGX7YmzKLcdJnSam61BrNFrH",
+                "ANS_ADDITIONAL_PARAM":"-sp=ip=[external ip] -sp=nodeprivkey=[MN privkey]",
+                "TEMPLATE_PATH": "crown/crown-mn-unit.json",
+                "DaemonName": "crown"
+            },
+            "linkedPages": [
+                {
+                    "page": "src/pages/compose-basics.md",
+                    "outputPath": "Docker-and-Compose-Basics.md"
+                },
+                {
+                    "page": "src/pages/node-requirements.md",
+                    "outputPath": "System-Requirements.md"
+                },
+                {
+                    "page": "src/pages/updates.md",
+                    "outputPath": "management/Updates.md"
+                },
+                {
+                    "page": "src/pages/readme.md",
+                    "outputPath": "Readme.md"
+                },
+                {
+                    "page": "src/pages/setup/multi-node.md",
+                    "outputPath": "setup/Multi-Node.md"
+                }
+            ]
+        },
+        {
+            "id": "wire-mn",
+            "path": "src/nodes/btc-derivatives",
+            "output": "release/wire-mn",
+            "variables": {
+                "ProjectNameLong": "AIRWIRE Masternode",
+                "Repository": "cryon-io/docker-wire-mn",
+                "UserID": 16000,
+                "NODE_TYPE": "WIRE_MN",
+                "DONATION_CURR": "WIRE",
+                "DONATION_ADDR": "CRxuR593XxLQEXtxvM45wXo45kwxDgdXTd",
+                "ANS_ADDITIONAL_PARAM":"-sp=ip=[external ip] -sp=nodeprivkey=[MN privkey]",
+                "TEMPLATE_PATH": "crown/crown-mn-unit.json",
+                "DaemonName": "wire"
+            },
+            "linkedPages": [
+                {
+                    "page": "src/pages/compose-basics.md",
+                    "outputPath": "Docker-and-Compose-Basics.md"
+                },
+                {
+                    "page": "src/pages/node-requirements.md",
+                    "outputPath": "System-Requirements.md"
+                },
+                {
+                    "page": "src/pages/updates.md",
+                    "outputPath": "management/Updates.md"
+                },
+                {
+                    "page": "src/pages/readme.md",
+                    "outputPath": "Readme.md"
+                },
+                {
+                    "page": "src/pages/setup/multi-node.md",
+                    "outputPath": "setup/Multi-Node.md"
+                }
+            ]
+        },
+        {
+            "id": "zest-mn",
+            "path": "src/nodes/btc-derivatives",
+            "output": "release/zest-mn",
+            "variables": {
+                "ProjectNameLong": "ZEST Masternode",
+                "Repository": "cryon-io/docker-zest-mn",
+                "UserID": 17000,
+                "NODE_TYPE": "ZEST_MN",
+                "DONATION_CURR": "ZEST",
+                "DONATION_ADDR": "ZEeDEnGaPHRmA5VN6cHWN7fdsQWgcN3v5z",
+                "ANS_ADDITIONAL_PARAM":"-sp=ip=[external ip] -sp=port=[port number] -sp=nodeprivkey=[MN privkey]",
+                "TEMPLATE_PATH": "zest/unit.json",
+                "DaemonName": "zest"
+            },
+            "linkedPages": [
+                {
+                    "page": "src/pages/compose-basics.md",
+                    "outputPath": "Docker-and-Compose-Basics.md"
+                },
+                {
+                    "page": "src/pages/node-requirements.md",
+                    "outputPath": "System-Requirements.md"
+                },
+                {
+                    "page": "src/pages/updates.md",
+                    "outputPath": "management/Updates.md"
+                },
+                {
+                    "page": "src/pages/readme.md",
+                    "outputPath": "Readme.md"
+                },
+                {
+                    "page": "src/pages/setup/multi-node.md",
+                    "outputPath": "setup/Multi-Node.md"
+                }
+            ]
+        },
+                {
+            "id": "snode-mn",
+            "path": "src/nodes/btc-derivatives",
+            "output": "release/snode-mn",
+            "variables": {
+                "ProjectNameLong": "SNODE Masternode",
+                "Repository": "cryon-io/docker-snode-mn",
+                "UserID": 17001,
+                "NODE_TYPE": "SNODE_MN",
+                "DONATION_CURR": "SND",
+                "DONATION_ADDR": "SaQpqmT2nimD8jLPZwfx3eL9B4jWmvqyWx",
+                "ANS_ADDITIONAL_PARAM":"-sp=ip=[external ip] -sp=nodeprivkey=[MN privkey]",
+                "TEMPLATE_PATH": "snode/unit.json",
+                "DaemonName": "snodecoin"
+            },
+            "linkedPages": [
+                {
+                    "page": "src/pages/compose-basics.md",
+                    "outputPath": "Docker-and-Compose-Basics.md"
+                },
+                {
+                    "page": "src/pages/node-requirements.md",
+                    "outputPath": "System-Requirements.md"
+                },
+                {
+                    "page": "src/pages/updates.md",
+                    "outputPath": "management/Updates.md"
+                },
+                {
+                    "page": "src/pages/readme.md",
+                    "outputPath": "Readme.md"
                 },
                 {
                     "page": "src/pages/setup/multi-node.md",

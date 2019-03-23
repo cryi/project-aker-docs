@@ -1,4 +1,4 @@
-- modular and transparent
+- modular and transparent - open source
 - simple setup and management
 - auto updates to both AMS and the node software (speeds up and simplifies node network upgrades)
 - health checks with auto-heal to maximize uptime

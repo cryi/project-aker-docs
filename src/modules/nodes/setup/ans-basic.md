@@ -4,4 +4,4 @@
     - `wget https://github.com/cryon-io/ans/archive/master.zip && unzip -o master.zip && mv ./ans-master [path] && cd [path] && chmod +x ./ans`
 1. one of commands below depending of your preference (run as *root* or use *sudo*)
     - `./ans --full --node=<%NODE_TYPE%>` # full setup of Ether1 SN/MN for current user
-    - `./ans --full --user=[user] --node=<%NODE_TYPE%> --auto-update-level=[level]` # full setup of Ether1 SN/MN for defined user (directory location and structure is preserved) sets specified auto update level (Refer to [Auto updates](https://github.com/cryon-io/ans/wiki/Auto-Updates))
+    - `./ans --full --user=[user] --node=<%NODE_TYPE%> --auto-update-level=[level] <%ANS_ADDITIONAL_PARAM%>` # full setup of <%NODE_TYPE%> for defined user (directory location and structure is preserved) sets specified auto update level (Refer to [Auto updates](https://github.com/cryon-io/ans/wiki/Auto-Updates))

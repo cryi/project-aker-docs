@@ -1,7 +1,7 @@
-- all [features of ANS](https://github.com/cryon-io/ans/wiki)
-- simple setup and management of multiple nodes
-- auto updates to Unit
+- all [features of ANS](https://github.com/cryon-io/ans/wiki), but __closed source__
+- auto updates to Unit and nodes
+    - allows better control of auto updates than ANS
 - templated setups 
     - simplified migration and reinstallation
     - ability to share setup templates
-- management of multiple nodes 
+- simplified setup and management of multiple nodes 

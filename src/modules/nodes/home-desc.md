@@ -1,1 +1,1 @@
-<%ProjectNameLong%> docker template for ANS (Autonomous Node System) and Unit (Unified crypto node management).
+**<%ProjectNameLong%>** docker template for [ANS (Autonomous Node System)](https://github.com/cryon-io/ans) and [Unit (Unified crypto node management)](https://github.com/cryon-io/unit).
